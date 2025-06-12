@@ -136,4 +136,5 @@ Seleccione una opción:
 _______________________________________
 ```
 ## 🎞️Capturas de pantalla o ejemplos de uso (opcional):
+![alt text](image.png)
 ![alt text](image-1.png)
