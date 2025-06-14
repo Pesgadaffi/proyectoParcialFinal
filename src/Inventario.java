@@ -16,24 +16,30 @@ public class Inventario {
         }
     }
 
-    public void mostrarProductos() {
-        for (int i = 0; i < contador; i++) {
-            productos[i].mostrarInformacion();
-            System.out.println("-----------");
-        }
-    }
+    public Producto[] getProductos() {
+    return productos;
+}
+
+
+    public Producto[] mostrarProductos() {
+    return productos;
+}
+
 
     public boolean eliminarProducto(int id) {
-        for (int i = 0; i < contador; i++) {
-            if (productos[i].getId() == id) {
-                productos[i] = productos[--contador];
-                System.out.println("Producto eliminado.");
-                return true;
+    for (int i = 0; i < contador; i++) {
+        if (productos[i].getId() == id) {
+            // Desplazar los elementos hacia la izquierda
+            for (int j = i; j < contador - 1; j++) {
+                productos[j] = productos[j + 1];
             }
+            productos[contador - 1] = null; // Eliminar el último duplicado
+            contador--;
+            return true;
         }
-        System.out.println("Producto no encontrado.");
-        return false;
     }
+    return false;
+}
 
     public Producto buscarProducto(int id) {
         for (int i = 0; i < contador; i++) {

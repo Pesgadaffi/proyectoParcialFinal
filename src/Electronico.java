@@ -6,6 +6,11 @@ public class Electronico extends Producto {
         this.garantiaMeses = garantiaMeses;
     }
 
+    public int getGarantia() {
+    return garantiaMeses;
+}
+
+
     public int getGarantiaMeses() {
         return garantiaMeses;
     }
